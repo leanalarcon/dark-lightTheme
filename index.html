@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href="images\triangular-logo.png">
+    <title>Dark & Light Theme</title>
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round"></div>
+        </label>
+        <small>Change your theme</small>
+    </div>
+    <section>
+        <div class="heading">
+            <h1>This is our <br><b>Dark & Light Theme</b></h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <a href="https://github.com/leanalarcon" target="_blank" class="btn-1st"><b>This is a free project</b></a>
+        </div>
+    </section>
+
+    <script>
+        const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+        function switchColor(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+
+        colorSwitch.addEventListener('change', switchColor, false);
+    </script>
+
+</body>
+</html>

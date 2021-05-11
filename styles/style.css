@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #000;
+    --bg-color: #C6C013;
+    --secondary-color: #000;
+}
+
+[data-theme = "dark"] {
+    --primary-color: #C6C013;
+    --bg-color: #000;
+    --secondary-color: #C6C013;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    height: 100vh;
+    display: flex;
+}
+
+section {
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.heading {
+    text-align: center;
+}
+
+.btn-1st {
+    background-color: var(--primary-color);
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    display: inline-block;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 1.6;
+}
+
+.theme-switch-wrapper {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.theme-switch {
+    display: block;
+    height: 35px;
+    position: relative;
+    width: 60px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #000;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    transition: .5s all;
+}
+
+.slider::before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 25px;
+    left: 4px;
+    position: absolute;
+    transition: .5s all;
+    width: 25px;
+}
+
+input:checked + .slider {
+    background-color: #C6C013;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+.slider.round {
+    border-radius: .25rem;
+}
+
+.slider.round:before {
+    border-radius: .25rem;
+}
